@@ -50,3 +50,5 @@ const verificaHeroi = (props: HeroDto): string => {
 
 // console.log(verificaHeroi(heroi1));
 console.log(verificaHeroi({ fly: false, power: false }));
+
+// verificando a branch main
