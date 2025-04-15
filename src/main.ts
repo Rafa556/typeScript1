@@ -35,20 +35,17 @@ addHero(heroi4);
 
 const verificaHeroi = (props: HeroDto): string => {
   heros.findIndex((value) => value === props);
-  if (props.fly === true && props.power === true) {
+  if (props.fly && props.power) {
     return "Eu sou o Superman!";
   }
-  if (props.fly === true && props.power === false) {
+  if (props.fly && !props.power) {
     return "Eu sou o lanterna verde!";
   }
-  if (props.fly === false && props.power === true) {
+  if (!props.fly && props.power) {
     return "Eu sou o hulk!";
-  } else {
-    return "I AM BATMAN!!!";
   }
+  return "I AM BATMAN!!!";
 };
 
 // console.log(verificaHeroi(heroi1));
-console.log(verificaHeroi({ fly: false, power: false }));
-
-// verificando a branch main
+console.log(verificaHeroi({ fly: true, power: true }));
